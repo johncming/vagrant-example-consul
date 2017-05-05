@@ -26,7 +26,6 @@ Vagrant.configure("2") do |config|
 
       vms.vm.provider "virtualbox" do |v|
         v.customize ["modifyvm", :id, "--cpuexecutioncap", box[:cpu]]
-        v.customize ["modifyvm", :id, "--memory", box[:ram]]
       end
 
       vms.vm.network :private_network, ip: box[:ip]
